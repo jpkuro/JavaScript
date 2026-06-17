@@ -61,7 +61,7 @@ if(edad >= 18 || DNI == true){
 }
 
 */
-
+/*
 var comensal = "Jose";
 var cuentaComida = 2800 + 1300;
 var cuentaBebida = 900 + 650;
@@ -72,3 +72,64 @@ console.log("el total de la cuenta en comida es de: " + cuentaComida);
 console.log("El total de la cuenta en bebida es de: " + cuentaBebida);
 console.log("El total de la cuenta es de: " + totalCuenta);
 
+*/
+/*
+var color = prompt("Ingrese un color: ");
+
+switch(color){
+    case "rojo":
+        console.log("El color es rojo");
+        break;
+    case "azul":
+        console.log("el color es azul");
+        break;
+    default:
+        console.log("El color no es ni rojo ni azul");
+        break;
+
+}
+*/
+
+// ingresa dos numeros  mediante un prompt y almacena sus valores en dos variables distintas
+// realiza una resta entre los dos valores en javascript
+// almacenar el resultado en una variable, importar el archivo JS a una pagina html
+// si e resultado de la resta es mayor a 0 mostrar mediante  un console o un aler "es mayor a 0 "
+//si es mayor a 0 comparar si el numero es par en caso de que lo sea, mostrar un mensaje que diga "es par"
+// en caso de que no uno que diga "es impar"
+// en caso de que sea menor a 0 mostrar un mesaje que  diga "es menor o igual a 0"  
+
+/*var num1 = prompt("ingrese el primer numero: ");
+var num2 = prompt("Ingresa el segund numero: ");
+
+var resta = num1 - num2;
+
+if (resta > 0){
+    console.log("es mayor a 0");
+    resta = resta % 2
+    if(resta == 0){
+    console.log("el numero es par");
+    }else{
+        console.log("el numero es impar");
+    }
+
+}else{
+    console.log("es menor o igual a 0");
+}
+*/
+/*
+var contador = 0;
+
+while (contador <=10){
+    console.log("esta e la vuelta numero: " + contador);
+    contador++
+}*/
+/*
+for (var i=1;i<=10;i++){
+    console.log("vuelta numer: " + i);
+}*/
+
+var contador =20;
+do{
+ console.log("la vuelta numero: " + contador);
+ contador++
+}while(contador <10);
