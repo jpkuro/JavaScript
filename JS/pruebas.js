@@ -127,9 +127,35 @@ while (contador <=10){
 for (var i=1;i<=10;i++){
     console.log("vuelta numer: " + i);
 }*/
-
+/*                                                                                                                                                                                                  
 var contador =20;
 do{
  console.log("la vuelta numero: " + contador);
  contador++
-}while(contador <10);
+}while(contador <10);*/
+/*
+
+for(var i=1;i<=35;i++){
+
+    console.log("va pór el numero: " + i);
+}*/
+/*
+var contador = 10;
+do{
+console.log("cuenta regresiva: " + contador);
+contador--
+}while(contador > 0);
+if(contador == 0){
+    console.log("feliz año");
+}*/
+
+/*var respuesta = window.prompt("se bienvenido a la grieta del invocador","llama a lagrieta");
+alert ("su respuesta fue: " + respuesta);*/
+
+
+var confirma = window.confirm("¿Has jugado lol hoy?");
+if(confirma == true){
+    console.log("has cumplido con la grieta ")
+}else{
+    console.log("escapa del visio");
+}
