@@ -152,10 +152,129 @@ if(contador == 0){
 /*var respuesta = window.prompt("se bienvenido a la grieta del invocador","llama a lagrieta");
 alert ("su respuesta fue: " + respuesta);*/
 
-
+/*
 var confirma = window.confirm("¿Has jugado lol hoy?");
 if(confirma == true){
     console.log("has cumplido con la grieta ")
 }else{
     console.log("escapa del visio");
+}*/
+
+/*
+var fecha = new Date();
+
+alert("la fecha actual es: " + fecha);*/
+/*
+var fecha = new Date(1996, 10, 8);
+
+alert("la fecha actual es: " + fecha);*/
+/*
+var fecha = new Date("05/06/2026");
+
+alert("la fecha actual es: " + fecha);*/
+/*
+var fecha = new Date();
+var  dia = fecha.getDay();
+var mes = fecha.getMonth();
+var anio = fecha.getFullYear();
+
+alert( " Dia : " + dia + " Mes: " + (mes+1) +" Año  :" + anio);*/
+/*
+var valor1 = parseInt(window.prompt("ingrese el primer valor"));
+var valor2 = parseInt(window.prompt("Ingrese el segundo valor"));
+
+if(valor1 < valor2){
+    alert("el valor 2 es mayor");
+
+}else{
+    alert ("valor 1 es mayor");
+}*/
+/*
+var fechaingreso = prompt("ingrese la fecha que requiera", "MM/DD/YYYY");
+
+var fecha = new Date (fechaingreso);
+var dia = fecha.getDay();
+var mes = fecha.getMonth();
+var anio = fecha.getFullYear();
+
+var diaSemana;
+
+switch  (dia){
+    case 0 :
+        diaSemana = "Domingo"
+        break;
+    case 1 :
+        diaSemana = "Lunes"
+        break;
+    case 2 :
+        diaSemana = "Martes"
+        break;
+    case 3 :
+        diaSemana = "Miercoles"
+        break;
+    case 4 :
+        diaSemana = "Jueves"
+        break;
+    case 5 :
+        diaSemana = "Viernes"
+        break;
+    case 6 :
+        diaSemana = "Sabado"
+        break;
+    default:  alert("No es un dia valido ");
+
+}
+
+alert("la fecha ingresada es: " + (mes+1) + "/" + diaSemana + "/" + anio);
+*/
+
+///matis con datos
+/*let miVector = [1,2,3,4,5];
+
+console.log(miVector[2]);//bucar en  array
+
+let miMatriz =[[1,2,3,4],[5,6,7,8],[9,10,11,12]];
+console.log(miMatriz[2][3]);//buscar en matriz
+
+*/
+/*
+let vector = new Array(3);
+
+vector[0] = "Jose";
+vector[1] = "Luis";
+vector[2] = "Palma";
+
+
+let matriz = new Array(3);
+
+for( let i = 0; i<3; i++ ){
+ matriz[i] = new Array(3);
+}
+console.log(matriz);*/
+/*
+let persona0 =["jose", "luis", "palma"];
+//let persona2 = ["alison", "nayerli", "palma"];
+//let persona3 = ["pablo", "daniel", "palma"];
+
+//let matriz = [persona0,persona2,persona3];
+for(let i=0; i<persona0.length; i++){
+    console.log(persona0[i]);
+
+    if(persona0[i] == "jose"){
+        console.log("eres el mejor");
+    }
+}
+//console.log(matriz);*/
+
+let persona0 =["jose", "luis", "palma"];
+let persona2 = ["alison", "nayerli", "palma"];
+let persona3 = ["pablo", "daniel", "palma"];
+
+let matriz = [persona0,persona2,persona3];
+
+for(let i=0; i<matriz.length; i++){
+    for(let j=0; j<matriz[j].length; j++){
+        console.log(matriz[j][i]);
+    }
+    
 }
