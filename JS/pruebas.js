@@ -265,7 +265,7 @@ for(let i=0; i<persona0.length; i++){
     }
 }
 //console.log(matriz);*/
-
+/*
 let persona0 =["jose", "luis", "palma"];
 let persona2 = ["alison", "nayerli", "palma"];
 let persona3 = ["pablo", "daniel", "palma"];
@@ -278,3 +278,102 @@ for(let i=0; i<matriz.length; i++){
     }
     
 }
+*/
+
+//metodo push en array
+/*
+let frutas  = ["naranja","banana"];
+frutas.push("manzana");
+console.log(frutas);
+*/
+///metodo eliminar
+/*let frutas  = ["naranja","banana"];
+frutas.push("manzana");
+console.log(frutas);
+frutas.pop();
+console.log(frutas);*/
+/*
+let frutas  = ["naranja","banana"];
+frutas.push("manzana");
+console.log(frutas);
+frutas.shift();
+//frutas.unshitf();
+console.log(frutas);*/
+/*
+let frutas  = ["naranja","banana","quiwi"];
+frutas.push("manzana");
+console.log(frutas);
+
+let frutasConA = frutas.filter(fruta =>fruta.includes("a"));
+console.log(frutasConA);*/
+/*
+let frutas  = ["naranja","banana","quiwi"];
+let frutas2  = ["manzana","mango","uva"];
+
+let todasLasFrutas = frutas.concat(frutas2);
+console.log(todasLasFrutas);///union
+
+todasLasFrutas.reverse();/// orden inverso
+console.log(todasLasFrutas);
+
+todasLasFrutas.sort();
+console.log(todasLasFrutas);*/
+/*
+function saludar(){
+    console.log("estoy en la primera funcion");
+}
+
+saludar();*/
+/*
+function sumar (num1,num2){
+
+        let resultado;
+        resultado = num1 + num2;
+        return resultado;
+
+}
+*//*
+let suma = sumar(5,2);
+console.log("el resultado es : " + suma);
+*/
+//ejercicio integrador principiante
+/* en un campo de entrenamiento pokemon se necesita evaluar el desempeño
+de cada pokemon en sus batalla para determiannr si estan listos para competir
+en la liga
+crea una funcion en javaScript que calcule el promedio de habilidades de un pokemon
+y determina si esta preparado para la competicion 
+(promedio mayor  o igual a 70) o no (promedio menor a 70)
+
+utiliza array para almacenar las habilidades de cada pokemon y sus nombres
+pistas:
+crea una array de nombre pokemon y una matriz de habilidades donde el indice de cada
+array con nombres de pokemones represente lña fila de habilidades de matriz
+
+ejemplo : si bulbasaur es el pokemon en la posicion 1 la fila 1 de la matriz tendra sus habilidades
+utiliza metodo array para manejar los datos y calcular el promedio de habilidades
+
+la funcion debe mostrar en consola el nombre del pokemon , sus habilidades 
+y si esta listo o no para la competicion
+
+podes crear mas de una funcion para diferentes tareas si quieres modular mas aun tu app
+*/
+
+var pokemon = ["Bulbasour","Chicorita","tourterra","Pikachu","Torti"];
+var habilidadesPokemon = [["latigo","hojaDaño","corteHoja"],
+                            ["corteHoja","tiraTormenta","talloDaño"],
+                            ["DañoSolar","terremoto","Temblor"],
+                            ["Impatrueno","cargaRelampago","colaMetal"],
+                            ["Fuego","LanzaLlamas","borticeFuego"]
+]
+function promediopokemon(pokemon,habilidaPo){
+    for(let i=0; i<pokemon.length; i++){
+        for(let j=0; j<habilidaPo[j].length; j++){
+            //console.log("el pokemon : " + pokemon[i] + " tiene las habilidaes de: " + habilidaPo[j])
+            return pokemon[i],habilidaPo[j];
+        }
+
+    }
+}
+let pokemonYHabilidad = promediopokemon(pokemon,habilidadesPokemon);
+console.log(pokemonYHabilidad);
+
