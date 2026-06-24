@@ -358,22 +358,79 @@ y si esta listo o no para la competicion
 podes crear mas de una funcion para diferentes tareas si quieres modular mas aun tu app
 */
 
-var pokemon = ["Bulbasour","Chicorita","tourterra","Pikachu","Torti"];
-var habilidadesPokemon = [["latigo","hojaDaño","corteHoja"],
-                            ["corteHoja","tiraTormenta","talloDaño"],
-                            ["DañoSolar","terremoto","Temblor"],
-                            ["Impatrueno","cargaRelampago","colaMetal"],
-                            ["Fuego","LanzaLlamas","borticeFuego"]
+/*
+var pokemon = ["Pikachu","scureo","Chicorita","corfish"]
+var habilidades = [
+    [50,81,56,89],
+    [78,94,85,84],
+    [95,85,25,85],
+    [68,79,84,96]
 ]
-function promediopokemon(pokemon,habilidaPo){
-    for(let i=0; i<pokemon.length; i++){
-        for(let j=0; j<habilidaPo[j].length; j++){
-            //console.log("el pokemon : " + pokemon[i] + " tiene las habilidaes de: " + habilidaPo[j])
-            return pokemon[i],habilidaPo[j];
-        }
 
+
+
+function promedioPkemon (habilidades){
+    let promedio = []; // se crea otro array para guardar el promedio de todos las habilidades
+
+    for(let i=0;i<habilidades.length;i++){//se hace el conteo del array de habilidades
+        let fila = habilidades[i];//asigno este array a una variable para usar una funcion array
+        let suma = fila.reduce((total,habilida)=>total+habilida,0);//funcion reduce hace que podamos usar un solo array de la matris 
+        promedio[i] = suma/fila.length;//calcula el promedio por la totalidad del array y su promedio
+    }
+    return promedio;//regresa un promedio
+}
+
+function evaluacionPokemon (pokemon, promedio){
+    for(let i=0;i<promedio.length;i++){// recibe el promedio para evaluarlo
+        if(promedio[i]>=70){//condicion del promedio a evaluar
+            console.log("el pokemon" + pokemon[i] + "tiene un promedio de : " + promedio[i]);
+        }else{
+            console.log("el pokemon :" + pokemon[i] + " no paso la evaluacion :" + promedio[i] )
+        }
+    }
+
+}
+//ejecuta las funciones y parametro
+let promedios = promedioPkemon(habilidades);
+evaluacionPokemon(pokemon,promedios);
+
+*/
+//metodos de string
+
+/*
+ejecicio practrico final haslo solo
+crea un programa que , dada un alista de nombres pre armada , un usaurio sea capaz de ingresar un nombre por teclado y el 
+programa realize una busqueda e identifique si el mismo esta presente en la lista o no
+- en caso de estar, se debe informar por pantalla esta situacion , caso contrario  de igual manera se debe informar mediante un mensaje
+tener en cuenta de que el programa debe ser insensible a mayusculas y minusculas 
+*/
+
+var Nombres = ["Jose","Pablo", "Nayerli","Margarita","Jacinto"];
+var compLetra = minusculas(Nombres);
+var nuevoN = buscarNombre(Nombres);
+
+
+console.log(Nombres)
+
+function buscarNombre(nombre){
+    var ingreso = prompt("Ingrese un nombre");
+    for(let i=0;i<nombre.length;i++){
+        //console.log(nombre[i]);
+        if(nombre[i].toUpperCase()==ingreso.toUpperCase()){
+            console.log("existe el registro" + ingreso);
+        }else{
+            var nuevoNombre = Nombres.push(ingreso);
+            console.log("no existia el registro y se agrego");
+        }
+        return nuevoNombre;
     }
 }
-let pokemonYHabilidad = promediopokemon(pokemon,habilidadesPokemon);
-console.log(pokemonYHabilidad);
+
+function minusculas(nombres){
+    let minusculasNombres = [];
+    for(let i=0;i<nombres.length;i++){
+        minusculasNombres = nombres[i].toUpperCase()
+        return minusculasNombres;
+    }
+}
 
