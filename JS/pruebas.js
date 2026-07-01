@@ -404,7 +404,7 @@ programa realize una busqueda e identifique si el mismo esta presente en la list
 - en caso de estar, se debe informar por pantalla esta situacion , caso contrario  de igual manera se debe informar mediante un mensaje
 tener en cuenta de que el programa debe ser insensible a mayusculas y minusculas 
 */
-
+/*
 var Nombres = ["Jose","Pablo", "Nayerli","Margarita","Jacinto"];
 var compLetra = minusculas(Nombres);
 var nuevoN = buscarNombre(Nombres);
@@ -434,3 +434,54 @@ function minusculas(nombres){
     }
 }
 
+*/
+/*
+function cambiarTexto(){
+    var textoParrafo = document.getElementById("miParrafo");
+    textoParrafo.textContent = "texto cambiado";
+    textoParrafo.style.color = "red";
+}*/
+
+/*
+crear una sencilla lista de tareas (to-do list) en HTMl que incluya un campo de texto
+de entrada y un boton de "agregar tarea"
+- cuando el usaurio introduzca una tarea y presione en el boton esta deberia añadirse
+ a una lista de tareas que en un principio debe estar vacia
+ - cada tarea en la lista debera estar acompañada por un boton "eliminar" a sulado
+
+ - al hacer clic en dicho boton la tarea correspondiente debera ser eliminada de la lista
+
+ pistas
+ - utilizar  javascript como  lenguaje de programacion  para desarrollo
+ - imvestigar sobre diferentes metodos del DOM que puedan ser utilizados para este desarrollo
+ - intentar mejorar un poco el diseño poniendo en practica conceptos basicos CSS
+ */
+var tareas = [];
+var ejecucion = ingreselista();
+
+
+ function ingreselista(tareas){
+    var itemsTarea = document.getElementById("entradaD").value;
+    var listatareas = [];
+    var lista = document.getElementById("lista");
+     
+    var tareasagregar = listatareas.push(itemsTarea);
+    for(var i=0;i<listatareas.length;i++){
+        var listadohtlm = document.createElement("li");
+        var eliminar = document.createElement("button")
+       listadohtlm.textContent = ""+ listatareas[i] +" ";
+       //listadohtlm.textContent = "";
+       eliminar.textContent = " Eliminar de Lista"
+         eliminar.addEventListener("click", function(){
+            listadohtlm.remove();
+            eliminar.remove();
+        })
+       listadohtlm.appendChild(eliminar);
+       lista?.appendChild(listadohtlm);
+      
+       
+        console.log(listatareas[i]);
+        return listatareas;
+    }
+    
+ }
